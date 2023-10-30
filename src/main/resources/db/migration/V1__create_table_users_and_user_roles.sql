@@ -4,7 +4,7 @@ create table users
     login        varchar(255)                            not null unique,
     password     varchar(255)                            not null,
     first_name   varchar(255),
-    second_name  varchar(255),
+    last_name    varchar(255),
     role_id      bigint                                  not null
 );
 
