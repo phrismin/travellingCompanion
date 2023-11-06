@@ -3,6 +3,7 @@ package com.rudoy.travellingcompanion.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.security.core.GrantedAuthority;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 @Table(name = "user_roles")
 @Getter
 @Setter
-public class UserRole {
+public class UserRole implements GrantedAuthority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,4 +20,9 @@ public class UserRole {
     private String role;
     @OneToMany(mappedBy = "role", fetch = FetchType.EAGER)
     private List<User> users = new ArrayList<>();
+
+    @Override
+    public String getAuthority() {
+        return role;
+    }
 }

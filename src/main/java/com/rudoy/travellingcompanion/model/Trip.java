@@ -4,10 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "trips")
@@ -31,10 +28,10 @@ public class Trip {
     private String transportInfo;
     @Column(name = "view_count")
     private Integer viewCount;
-    @Column(name = "tripInfo")
+    @Column(name = "trip_info")
     private String tripInfo;
-    @OneToOne
+    @ManyToOne
     private Driver driver;
-    @OneToMany
-    private List<Passenger> passengers = new ArrayList<>();
+    @ManyToOne
+    private Passenger passenger;
 }

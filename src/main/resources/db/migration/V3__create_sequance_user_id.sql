@@ -1,0 +1,1 @@
+create sequence bigint start 1 increment 1 owned by public.users.id

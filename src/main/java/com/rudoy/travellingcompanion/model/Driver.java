@@ -1,11 +1,11 @@
 package com.rudoy.travellingcompanion.model;
 
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "drivers")
@@ -19,7 +19,7 @@ public class Driver extends User {
     @Column(name = "driver_rank")
     private Double driverRank;
     @Column(name = "transport_info")
-    private Double transportInfo;
-    @OneToOne
-    private Trip trip;
+    private String transportInfo;
+    @OneToMany(mappedBy = "driver")
+    private List<Trip> trips = new ArrayList<>();
 }
