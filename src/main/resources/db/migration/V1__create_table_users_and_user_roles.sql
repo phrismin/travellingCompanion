@@ -7,12 +7,14 @@ create table drivers
     id                 bigserial not null,
     primary key (id)
 );
+
 create table passengers
 (
     passenger_rank double precision,
     id             bigserial not null,
     primary key (id)
 );
+
 create table photos
 (
     id                      bigserial not null,
@@ -20,6 +22,7 @@ create table photos
     user_id                 bigint,
     primary key (id)
 );
+
 create table trips
 (
     id              bigserial not null,
@@ -35,12 +38,14 @@ create table trips
     passenger_id    bigint,
     primary key (id)
 );
+
 create table user_roles
 (
     id   bigserial not null,
     role varchar(255),
     primary key (id)
 );
+
 create table users
 (
     id                bigserial not null,
@@ -60,8 +65,6 @@ alter table if exists user_roles
 
 alter table if exists user_roles
     add constraint UK_user_roles_role unique (role);
-
-
 
 alter table if exists drivers
     add constraint FK_drivers_users foreign key (id) references users;

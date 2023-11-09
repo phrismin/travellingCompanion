@@ -13,26 +13,27 @@
     Login
     <input type="text" name="login">
     <br>
+
     Password
     <input type="password" name="password">
     <br>
 
-<#--    First Name-->
-<#--    <input type="text" name="firstName">-->
-<#--    <br>-->
-<#---->
-<#--    Last Name-->
-<#--    <input type="text" name="lastName">-->
-<#--    <br>-->
-<#---->
-<#--    Birth Date-->
-<#--    <input type="date" name="birthDate">-->
-<#--    <br>-->
-<#---->
-<#--    Phone Number-->
-<#--    <input type="text" name="phoneNumber">-->
-<#--    <br>-->
-<#---->
+    First Name
+    <input type="text" name="firstName">
+    <br>
+
+    Last Name
+    <input type="text" name="lastName">
+    <br>
+
+    Birth Date
+    <input type="date" name="birthDate">
+    <br>
+
+    Phone Number
+    <input type="text" name="phoneNumber">
+    <br>
+
     <input type="submit" value="Registration">
 </form>
 
