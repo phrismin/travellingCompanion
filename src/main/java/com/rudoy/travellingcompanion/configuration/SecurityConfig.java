@@ -19,6 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomUserDetailsService customUserDetailsService;
+    private final CustomUrlHandler customUrlHandler;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -48,6 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .successHandler(customUrlHandler)
                 .permitAll()
                 .successForwardUrl("/mainPage")
                 .and()

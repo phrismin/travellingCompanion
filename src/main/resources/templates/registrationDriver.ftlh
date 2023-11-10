@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<h2>Registration form</h2>
+<h2>Registration driver</h2>
 <form action="/registration/driver" method="post">
     Login
     <input type="text" name="login">
@@ -26,12 +26,24 @@
     <input type="text" name="lastName">
     <br>
 
-    Birth Date
-    <input type="date" name="birthDate">
-    <br>
+<#--    Birth Date-->
+<#--    <input type="date" name="birthDate">-->
+<#--    <br>-->
 
     Phone Number
     <input type="text" name="phoneNumber">
+    <br>
+
+    Category
+    <input type="text" name="category">
+    <br>
+
+    Driving experience
+    <input type="number" min="0" name="drivingExperience">
+    <br>
+
+    Transport info
+    <input type="text" name="transportInfo">
     <br>
 
     <input type="submit" value="Registration">

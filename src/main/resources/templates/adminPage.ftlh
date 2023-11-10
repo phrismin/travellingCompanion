@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        Main Page
+        Admin Page
     </title>
 </head>
 
 <body>
-<h2>Main Page</h2>
+<h2>Admin Page</h2>
 </body>
 
 </html>
